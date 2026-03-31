@@ -13,7 +13,7 @@
 #' # load the data
 #' data(mtcars)
 #' 
-#' # fit a mod
+#' # fit a model
 #' mtcars |> plm(drat~wt+qsec) |> summary()
 plm<-function(data,formula,...) {
   stats::lm(formula=formula,data=data,...)

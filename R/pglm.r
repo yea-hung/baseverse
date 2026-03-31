@@ -13,7 +13,7 @@
 #' # load the data
 #' data(mtcars)
 #' 
-#' fit a model
+#' # fit a model
 #' mtcars |> pglm(am~wt+qsec) |> summary()
 pglm<-function(data,formula,...) {
   stats::glm(formula=formula,data=data,...)
