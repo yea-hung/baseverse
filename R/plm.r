@@ -1,4 +1,4 @@
-#' `plm.r()`
+#' A wrapper function to `lm()` that supports piping
 #' 
 #' A wrapper function to `lm()`, with the `data` argument listed first to enable piping.
 #'

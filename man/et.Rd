@@ -2,7 +2,7 @@
 % Please edit documentation in R/et.r
 \name{et}
 \alias{et}
-\title{\code{et()}}
+\title{A function for exploratory tables}
 \usage{
 et(data_frame, variable_name)
 }

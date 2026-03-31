@@ -2,7 +2,7 @@
 % Please edit documentation in R/pglm.r
 \name{pglm}
 \alias{pglm}
-\title{\code{pglm.r()}}
+\title{A wrapper function to \code{glm()} that supports piping}
 \usage{
 pglm(data, formula, ...)
 }

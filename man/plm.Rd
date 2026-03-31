@@ -2,7 +2,7 @@
 % Please edit documentation in R/plm.r
 \name{plm}
 \alias{plm}
-\title{\code{plm.r()}}
+\title{A wrapper function to \code{lm()} that supports piping}
 \usage{
 plm(data, formula, ...)
 }

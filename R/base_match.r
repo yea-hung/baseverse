@@ -1,4 +1,4 @@
-#' `base_match()`
+#' A base-R approximation of *dplyr*'s `case_match()`
 #'
 #' A base-R approximation of *dplyr*'s `case_match()`. Unlike `case_match()`, `base_when()` returns a factor. The levels will be ordered according to the order included in `codebook`.
 #' @param original_variable the original variable

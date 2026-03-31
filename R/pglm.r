@@ -1,4 +1,4 @@
-#' `pglm.r()`
+#' A wrapper function to `glm()` that supports piping
 #' 
 #' A wrapper function to `glm()`, with the `data` argument listed first to enable piping.
 #'

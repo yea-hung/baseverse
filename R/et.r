@@ -1,4 +1,4 @@
-#' `et()`
+#' A function for exploratory tables
 #'
 #' Creates a table for a variable, mimicking *dplyr*'s `count()`. In my mind, ET stands for easy table or exploratory table.
 #' @param data_frame the data.frame
