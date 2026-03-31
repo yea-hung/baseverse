@@ -1,4 +1,4 @@
-#' A wrapper function to `lm()` that supports piping
+#' Fits linear models, with support for piping
 #' 
 #' A wrapper function to `lm()`, with the `data` argument listed first to enable piping.
 #'

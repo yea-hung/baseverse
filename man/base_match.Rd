@@ -2,7 +2,7 @@
 % Please edit documentation in R/base_match.r
 \name{base_match}
 \alias{base_match}
-\title{A base-R approximation of \emph{dplyr}'s \code{case_match()}}
+\title{Defines factors using value-label mapping}
 \usage{
 base_match(original_variable, ..., as_factor = TRUE, string_for_na = "")
 }

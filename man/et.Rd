@@ -2,7 +2,7 @@
 % Please edit documentation in R/et.r
 \name{et}
 \alias{et}
-\title{A function for exploratory tables}
+\title{Tables variables}
 \usage{
 et(data_frame, variable_name)
 }
@@ -15,7 +15,7 @@ et(data_frame, variable_name)
 a data frame
 }
 \description{
-Creates a table for a variable, mimicking \emph{dplyr}'s \code{count()}. In my mind, ET stands for easy table or exploratory table.
+Creates a table for a variable, mimicking \emph{dplyr}'s \code{count()}. In my mind, ET stands for exploratory table.
 }
 \examples{
 # load data

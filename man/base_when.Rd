@@ -2,7 +2,7 @@
 % Please edit documentation in R/base_when.r
 \name{base_when}
 \alias{base_when}
-\title{A base-R approximation of \emph{dplyr}'s \code{case_when()}}
+\title{Defines factors using logical objects}
 \usage{
 base_when(..., as_factor = TRUE, string_for_na = "")
 }

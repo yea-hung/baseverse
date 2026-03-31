@@ -2,7 +2,7 @@
 % Please edit documentation in R/plm.r
 \name{plm}
 \alias{plm}
-\title{A wrapper function to \code{lm()} that supports piping}
+\title{Fits linear models, with support for piping}
 \usage{
 plm(data, formula, ...)
 }

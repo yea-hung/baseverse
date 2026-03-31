@@ -1,4 +1,4 @@
-#' A wrapper function to `glm()` that supports piping
+#' Fits generalized linear models, with support for piping
 #' 
 #' A wrapper function to `glm()`, with the `data` argument listed first to enable piping.
 #'
