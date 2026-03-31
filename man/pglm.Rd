@@ -23,5 +23,6 @@ A wrapper function to \code{glm()}, with the \code{data} argument listed first t
 # load the data
 data(mtcars)
 
-mtcars |> pglm(am~wt+qsec)
+fit a model
+mtcars |> pglm(am~wt+qsec) |> summary()
 }

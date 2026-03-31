@@ -23,5 +23,6 @@ A wrapper function to \code{lm()}, with the \code{data} argument listed first to
 # load the data
 data(mtcars)
 
+# fit a mod
 mtcars |> plm(drat~wt+qsec) |> summary()
 }
