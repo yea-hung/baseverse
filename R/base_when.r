@@ -1,6 +1,6 @@
 #' A base-R approximation of *dplyr*'s `case_when()`
 #'
-#' A base-R approximation of *dplyr*'s `case_when()`. Unlike `case_when()`, `base_when()` returns a factor. The levels will be ordered according to the order included in `conditions`.
+#' A base-R approximation of *dplyr*'s `case_when()`. Unlike `case_when()`, `base_when()` returns a factor. The levels will be ordered according to the order included in `...`.
 #' @param ... conditions for defining the replacement values, specified as a named list, with each element in `'label'=logical_vector` format, with the levels listed in the desired order
 #' @param as_factor logical, controlling whether the function should return a factor
 #' @param string_for_na string value that will be converted to NA
