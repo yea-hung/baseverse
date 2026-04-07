@@ -11,10 +11,21 @@
 #'
 #' @examples
 #' # load the data
-#' data(mtcars)
-#' 
+#' data(nhanes)
+#'
+#' # define country
+#' nhanes<-nhanes |> transform(
+#'   country=base_match(dmdborn4,'USA'=1,'Other'=2)
+#' )
+#'
 #' # fit a model
-#' mtcars |> plm(drat~wt+qsec) |> summary()
+#' mymodel<-nhanes |> p_lm(bpxosy1~country)
+#' 
+#' # obtain model details
+#' mymodel |> summary()
+#' 
+#' # obtain confidence interval
+#' mymodel |> confint()
 p_lm<-function(data,formula,...) {
   stats::lm(formula=formula,data=data,...)
 }

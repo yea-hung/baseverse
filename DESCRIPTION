@@ -1,10 +1,10 @@
 Package: baseverse
 Title: Modern Base-R Functions
-Version: 0.1.5
+Version: 0.1.0
 Authors@R: 
     person(given = 'Yea-Hung', family = 'Chen', 
        email = 'yea-hung.chen@ucsf.edu', role = c('aut','cre'))
-Description: Includes modern base-R functions, allowing for native piping. base_match() and base_when() mimic dplyr's case_match() and case_when(), but return a factor by default with levels ordered according to user input.
+Description: Includes modern base-R functions. Functions beginning with p_ are wrapper functions to existing base-R functions, supporting native piping. base_match() and base_when() mimic case_match() and case_when() from 'dplyr' but return a factor by default with levels ordered according to user input. et() mimics count() from 'dplyr'. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
