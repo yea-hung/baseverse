@@ -11,10 +11,26 @@
 #'
 #' @examples
 #' # load the data
-#' data(mtcars)
+#' data(nhanes)
+#'
+#' # define asthma
+#' nhanes<-nhanes |> transform(
+#'   asthma=base_match(mcq010,'No'=2,'History of asthma'=1)
+#' )
+#'
+#' # define smoking
+#' nhanes<-nhanes |> transform(
+#'   smoking=base_match(smq020,'No'=2,'History of smoking'=1)
+#' )
 #' 
 #' # fit a model
-#' mtcars |> pglm(am~wt+qsec) |> summary()
+#' mymodel<-nhanes |> p_glm(asthma~smoking,family=binomial(link='logit'))
+#' 
+#' # obtain model details
+#' mymodel |> summary()
+#' 
+#' # obtain confidence interval
+#' mymodel |> confint() |> exp()
 p_glm<-function(data,formula,...) {
   stats::glm(formula=formula,data=data,...)
 }

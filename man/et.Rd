@@ -15,7 +15,7 @@ et(data_frame, variable_name)
 a data frame
 }
 \description{
-Creates a table for a variable, mimicking \emph{dplyr}'s \code{count()}. In my mind, ET stands for exploratory table.
+Creates a table for a variable, mimicking \code{count()} (from 'dplyr'). ET stands for exploratory table.
 }
 \examples{
 # load data

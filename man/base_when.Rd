@@ -17,7 +17,7 @@ base_when(..., as_factor = TRUE, string_for_na = "")
 a factor
 }
 \description{
-A base-R approximation of \emph{dplyr}'s \code{case_when()}. Unlike \code{case_when()}, \code{base_when()} returns a factor. The levels will be ordered according to the order included in \code{...}.
+A base-R approximation of \code{case_when()} (from 'dplyr'). Unlike \code{case_when()}, \code{base_when()} returns a factor. The levels will be ordered according to the order included in \code{...} (see below).
 }
 \examples{
 # load data

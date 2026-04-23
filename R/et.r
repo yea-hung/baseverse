@@ -1,6 +1,6 @@
 #' Tables variables
 #'
-#' Creates a table for a variable, mimicking *dplyr*'s `count()`. In my mind, ET stands for exploratory table.
+#' Creates a table for a variable, mimicking `count()` (from 'dplyr'). ET stands for exploratory table.
 #' @param data_frame the data.frame
 #' @param variable_name the variable name
 #'

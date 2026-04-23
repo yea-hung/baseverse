@@ -1,6 +1,6 @@
 Package: baseverse
 Title: Modern Base-R Functions
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given = 'Yea-Hung', family = 'Chen', 
        email = 'yea-hung.chen@ucsf.edu', role = c('aut','cre'))

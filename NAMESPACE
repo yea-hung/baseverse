@@ -3,6 +3,7 @@
 export(base_match)
 export(base_when)
 export(et)
+export(not)
 export(p_cor)
 export(p_glm)
 export(p_lm)
