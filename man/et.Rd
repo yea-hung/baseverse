@@ -23,7 +23,7 @@ data(nhanes)
 
 # define country
 nhanes<-nhanes |> transform(
-  country=base_match(nhanes$dmdborn4,'USA'=1,'Other'=2)
+  country=base_match(dmdborn4,'USA'=1,'Other'=2)
 )
 
 # examine variable, with native piping
