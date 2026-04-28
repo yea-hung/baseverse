@@ -1,6 +1,6 @@
 #' Fits linear models, with support for piping
 #' 
-#' A wrapper function to `lm()`, with the `data` argument listed first to support native piping.
+#' A wrapper function for `lm()`, with the `data` argument listed first to support native piping.
 #'
 #' @param data the data
 #' @param formula the formula
@@ -19,13 +19,13 @@
 #' )
 #'
 #' # fit a model
-#' mymodel<-nhanes |> p_lm(bpxosy1~country)
+#' my_model<-nhanes |> p_lm(bpxosy1~country)
 #' 
 #' # obtain model details
-#' mymodel |> summary()
+#' my_model |> summary()
 #' 
 #' # obtain confidence interval
-#' mymodel |> confint()
+#' my_model |> confint()
 p_lm<-function(data,formula,...) {
   stats::lm(formula=formula,data=data,...)
 }

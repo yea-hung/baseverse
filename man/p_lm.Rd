@@ -17,7 +17,7 @@ p_lm(data, formula, ...)
 an \code{lm} object
 }
 \description{
-A wrapper function to \code{lm()}, with the \code{data} argument listed first to support native piping.
+A wrapper function for \code{lm()}, with the \code{data} argument listed first to support native piping.
 }
 \examples{
 # load the data
@@ -29,11 +29,11 @@ nhanes<-nhanes |> transform(
 )
 
 # fit a model
-mymodel<-nhanes |> p_lm(bpxosy1~country)
+my_model<-nhanes |> p_lm(bpxosy1~country)
 
 # obtain model details
-mymodel |> summary()
+my_model |> summary()
 
 # obtain confidence interval
-mymodel |> confint()
+my_model |> confint()
 }
