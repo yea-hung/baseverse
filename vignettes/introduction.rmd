@@ -1,0 +1,144 @@
+---
+title: 'An introduction to *baseverse*'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An introduction to baseverse}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Overview
+
+*baseverse* is intended to be a relatively minimal suite of packages, supporting the use of base R with native piping. 
+
+Several functions are wrapper functions for existing base-R functions, adding support for native piping:
+
+- `p_cor()`: a wrapper for `cor()`
+- `p_glm()`: a wrapper for `glm()`
+- `p_lm()`: a wrapper for `lm()`
+- `p_t.test()`: a wrapper for `t.test()`
+- `p_table()`: a wrapper for `table()`
+- `p_wilcox.test()`: a wrapper for `wilcox.test()`
+
+Other functions are wrapper functions for existing base-R features:
+
+- `bang()`: is a wrapper for `!`, and is similar to `not()` from *magrittr*
+- `bracket()`: is a wrapper for `[]`
+- `dollar()`: is a wrapper for `$`, and is similar to `pull()` from *dplyr*
+
+Other functions mimic tidyverse functions:
+
+- `base_match()`: mimics `case_match()`, but returns a factor and respects the user's desired order of groups
+- `base_when()`: mimics `case_when()`, but returns a factor and respects the user's desired order of groups
+- `et()`: mimics `count()`
+
+## Loading the package
+
+Load the package:
+
+```{r}
+library(baseverse)
+```
+
+## Load the data
+
+This vignette will draw from the built-in `nhanes` data:
+
+```{r}
+data(nhanes)
+```
+
+## Country of birth
+
+Table the `dmdborn4` variable:
+
+```{r}
+nhanes |> p_table(dmdborn4)
+```
+
+Create a new, labelled version of `dmdborn4`:
+
+```{r}
+nhanes<-nhanes |> transform(
+  country=base_match(dmdborn4,'USA'=1,'Other'=2)
+)
+```
+
+Table the new variable using `p_table()`:
+
+```{r}
+nhanes |> p_table(country)
+```
+
+Or, table the new variable using `et()`:
+
+```{r}
+nhanes |> et(country)
+```
+
+Notice that the `USA` group is listed first. This is, deliberately, [hugely different behavior](https://github.com/yea-hung/baseverse#motivation) from `case_match()`. 
+
+## Total cholesterol
+
+Summarize the `lbxtc` variable:
+
+```{r}
+nhanes$lbxtc |> summary()
+```
+
+Or, using `dollar()`:
+
+
+```{r}
+nhanes |> dollar(lbxtc) |> summary()
+```
+
+Create a categorical variable for total cholesterol:
+
+```{r}
+nhanes<-nhanes |>
+  transform(
+    cholesterol=base_when(
+      'Desirable' = (lbxtc<200),
+      'Borderline high' = (lbxtc>=200)&(lbxtc<240),
+      'High' = (lbxtc>=240)
+    )
+  )
+```
+
+Table the new variable using `p_table()`:
+
+```{r}
+nhanes |> p_table(cholesterol)
+```
+
+Or, table the new variable using `et()`:
+
+```{r}
+nhanes |> et(cholesterol)
+```
+
+Notice that the `Desirable` group is listed first. This is, deliberately, [hugely different behavior](https://github.com/yea-hung/baseverse#motivation) from `case_when()`. 
+
+## Linear regression
+
+Fit a linear model for systolic blood pressure (`bpxosy1`):
+
+```{r}
+model_1<-nhanes |> 
+  p_lm(bpxosy1~ridageyr+country+lbxtc) 
+```
+
+Summarize the model:
+
+```{r}
+model_1 |>
+  summary()
+```
+
+Obtain 95% confidence intervals for the coefficients:
+
+```{r}
+model_1 |>
+  confint()
+```
