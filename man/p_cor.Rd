@@ -19,7 +19,7 @@ p_cor(data, x, y, ...)
 a numeric object
 }
 \description{
-A wrapper function to \code{cor()}, with support for piping.
+A wrapper function for \code{cor()}, with support for piping.
 }
 \examples{
 # load the data

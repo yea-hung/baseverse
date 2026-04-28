@@ -1,6 +1,6 @@
 #' Finds correlation coefficients, with support for piping
 #' 
-#' A wrapper function to `cor()`, with support for piping.
+#' A wrapper function for `cor()`, with support for piping.
 #'
 #' @param data the data
 #' @param x one of the two variables
