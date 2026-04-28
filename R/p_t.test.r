@@ -1,6 +1,6 @@
 #' Conducts t-tests, with support for piping
 #' 
-#' A wrapper function to `t.test()`, with the `data` argument listed first to support piping.
+#' A wrapper function for `t.test()`, with the `data` argument listed first to support piping.
 #'
 #' @param data the data
 #' @param x one of two variables

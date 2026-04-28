@@ -21,7 +21,7 @@ p_t.test(data, x = NULL, y = NULL, formula = NULL, ...)
 an \code{htest} object
 }
 \description{
-A wrapper function to \code{t.test()}, with the \code{data} argument listed first to support piping.
+A wrapper function for \code{t.test()}, with the \code{data} argument listed first to support piping.
 }
 \examples{
 # load the data
