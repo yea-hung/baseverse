@@ -9,7 +9,7 @@ base_match(original_variable, ..., as_factor = TRUE, string_for_na = "")
 \arguments{
 \item{original_variable}{the original variable}
 
-\item{...}{the codebook, specified as a named vector, with each element in \code{'label'=level} format, with the levels listed in the desired order}
+\item{...}{the codebook, specified as a named vector, with each element in \code{'label'=value} format, with the levels listed in the desired order}
 
 \item{as_factor}{logical, controlling whether the function should return a factor}
 
@@ -19,7 +19,7 @@ base_match(original_variable, ..., as_factor = TRUE, string_for_na = "")
 a factor
 }
 \description{
-A base-R approximation of \code{case_match()} (from 'dplyr'). Unlike \code{case_match()}, \code{base_when()} returns a factor. The levels will be ordered according to the order included in \code{...} (see below).
+A base-R approximation of \code{case_match()} from 'dplyr'. Unlike \code{case_match()}, \code{base_when()} returns a factor. The levels will be ordered according to the order included in \code{...} (see below).
 }
 \examples{
 # load data

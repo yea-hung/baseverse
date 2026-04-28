@@ -1,8 +1,8 @@
 #' Defines factors using value-label mapping
 #'
-#' A base-R approximation of `case_match()` (from 'dplyr'). Unlike `case_match()`, `base_when()` returns a factor. The levels will be ordered according to the order included in `...` (see below).
+#' A base-R approximation of `case_match()` from 'dplyr'. Unlike `case_match()`, `base_when()` returns a factor. The levels will be ordered according to the order included in `...` (see below).
 #' @param original_variable the original variable
-#' @param ... the codebook, specified as a named vector, with each element in `'label'=level` format, with the levels listed in the desired order
+#' @param ... the codebook, specified as a named vector, with each element in `'label'=value` format, with the levels listed in the desired order
 #' @param as_factor logical, controlling whether the function should return a factor
 #' @param string_for_na string value that will be converted to NA
 #'
