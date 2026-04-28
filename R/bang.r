@@ -1,6 +1,6 @@
-#' Flips a logical object.
+#' Uses the logical not
 #' 
-#' A wrapper function to `!`.
+#' A wrapper function for `!`.
 #'
 #' @param x a logical object
 #'
@@ -11,6 +11,9 @@
 #' # load the data
 #' data(nhanes)
 #' 
-#' # get correlation coefficient for systolic and diastolic
+#' # check whether values of smq020 are not missing
 #' nhanes$smq020 |> is.na() |> bang()
+#' 
+#' # check whether values of smq020 are not missing
+#' nhanes |> dollar(smq020) |> is.na() |> bang()
 bang<-function(x){ !x }

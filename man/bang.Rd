@@ -2,7 +2,7 @@
 % Please edit documentation in R/bang.r
 \name{bang}
 \alias{bang}
-\title{Flips a logical object.}
+\title{Uses the logical not}
 \usage{
 bang(x)
 }
@@ -13,12 +13,15 @@ bang(x)
 a logical object
 }
 \description{
-A wrapper function to \code{!}.
+A wrapper function for \code{!}.
 }
 \examples{
 # load the data
 data(nhanes)
 
-# get correlation coefficient for systolic and diastolic
+# check whether values of smq020 are not missing
 nhanes$smq020 |> is.na() |> bang()
+
+# check whether values of smq020 are not missing
+nhanes |> dollar(smq020) |> is.na() |> bang()
 }
