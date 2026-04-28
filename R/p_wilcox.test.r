@@ -1,6 +1,6 @@
 #' Conducts Wilcoxon rank-sum tests, with support for piping
 #' 
-#' A wrapper function to `wilcox.test()`, with the `data` argument listed first to support piping.
+#' A wrapper function for `wilcox.test()`, with the `data` argument listed first to support piping.
 #'
 #' @param data the data
 #' @param x one of two variables

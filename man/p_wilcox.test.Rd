@@ -21,7 +21,7 @@ p_wilcox.test(data, x = NULL, y = NULL, formula = NULL, ...)
 an \code{htest} object
 }
 \description{
-A wrapper function to \code{wilcox.test()}, with the \code{data} argument listed first to support piping.
+A wrapper function for \code{wilcox.test()}, with the \code{data} argument listed first to support piping.
 }
 \examples{
 # load the data
