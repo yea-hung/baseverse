@@ -17,7 +17,7 @@ p_glm(data, formula, ...)
 a \code{glm} object
 }
 \description{
-A wrapper function to \code{glm()}, with the \code{data} argument listed first to support piping.
+A wrapper function for \code{glm()}, with the \code{data} argument listed first to support piping.
 }
 \examples{
 # load the data
@@ -34,11 +34,11 @@ nhanes<-nhanes |> transform(
 )
 
 # fit a model
-mymodel<-nhanes |> p_glm(asthma~smoking,family=binomial(link='logit'))
+my_model<-nhanes |> p_glm(asthma~smoking,family=binomial(link='logit'))
 
 # obtain model details
-mymodel |> summary()
+my_model |> summary()
 
 # obtain confidence interval
-mymodel |> confint() |> exp()
+my_model |> confint() |> exp()
 }

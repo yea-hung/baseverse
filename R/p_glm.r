@@ -1,6 +1,6 @@
 #' Fits generalized linear models, with support for piping
 #' 
-#' A wrapper function to `glm()`, with the `data` argument listed first to support piping.
+#' A wrapper function for `glm()`, with the `data` argument listed first to support piping.
 #'
 #' @param data the data
 #' @param formula the formula
@@ -24,13 +24,13 @@
 #' )
 #' 
 #' # fit a model
-#' mymodel<-nhanes |> p_glm(asthma~smoking,family=binomial(link='logit'))
+#' my_model<-nhanes |> p_glm(asthma~smoking,family=binomial(link='logit'))
 #' 
 #' # obtain model details
-#' mymodel |> summary()
+#' my_model |> summary()
 #' 
 #' # obtain confidence interval
-#' mymodel |> confint() |> exp()
+#' my_model |> confint() |> exp()
 p_glm<-function(data,formula,...) {
   stats::glm(formula=formula,data=data,...)
 }
