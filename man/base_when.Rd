@@ -17,12 +17,13 @@ base_when(..., as_factor = TRUE, string_for_na = "")
 a factor
 }
 \description{
-A base-R approximation of \code{case_when()} (from 'dplyr'). Unlike \code{case_when()}, \code{base_when()} returns a factor. The levels will be ordered according to the order included in \code{...} (see below).
+A base-R approximation of \code{case_when()} from 'dplyr'. Unlike \code{case_when()}, \code{base_when()} returns a factor. The levels will be ordered according to the order included in \code{...} (see below).
 }
 \examples{
 # load data
 data(nhanes)
 
+# define cholesterol
 nhanes<-nhanes |>
   transform(
     cholesterol=base_when(
