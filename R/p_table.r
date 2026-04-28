@@ -1,6 +1,6 @@
 #' Tables variables, with support for piping
 #' 
-#' A wrapper function to `table()`, with support for piping.
+#' A wrapper function for `table()`, with support for piping.
 #'
 #' @param data the data
 #' @param x one variable

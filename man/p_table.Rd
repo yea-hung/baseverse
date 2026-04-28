@@ -19,7 +19,7 @@ p_table(data, x, y = NULL, ...)
 a \code{table} object
 }
 \description{
-A wrapper function to \code{table()}, with support for piping.
+A wrapper function for \code{table()}, with support for piping.
 }
 \examples{
 # load the data
