@@ -1,12 +1,12 @@
-# Overview
+## Overview
 
-*baseverse* is a collection of functions intended to support the continued use of base R in the modern era. There are three main types of functions included in the package:
+*baseverse* is a collection of functions intended to support the continued use of base R in the modern era. The package includes three main types of functions:
 
 - **wrapper functions for existing base-R functions**: These begin with `p_` and support native piping. For example, `p_lm()` is a wrapper for `lm()` supporting native piping.
 - **wrapper functions for existing base-R features**: These are named after the underlying symbols. For example, `dollar()` is a wrapper for dollar-sign notation.
-- **functions that mimic tidyverse functions**: These include `base_match()` and `base_when()` from *dplyr* (see the [section below](#base_match-and-base_when)). 
+- **functions that mimic tidyverse functions**: These include `base_match()` and `base_when()`, which mimic `case_match()` and `case_when()` from *dplyr*. Unlike their *dplyr* counterparts, `base_match()` and `base_when()` will honor the user's desired order of groups (see the discussion in the [section below](#base_match-and-base_when)). 
 
-# Installation
+## Installation
 
 The package is now available on CRAN! 🥳 
 
@@ -16,7 +16,7 @@ To install the GitHub version instead (which may be more recent than the CRAN ve
 remotes::install_github('yea-hung/baseverse')
 ```
 
-# `base_match()` and `base_when()`
+## `base_match()` and `base_when()`
 
 ### Motivation
 
