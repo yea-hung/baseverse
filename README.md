@@ -32,7 +32,7 @@ nhanes<-nhanes %>%
   )
 ```
 
-In this sort of solution, we have to type the level labels twice. The first occurrence defines the label-level mapping, while the second occurrence defines the order of the levels. I think this is inefficient.
+In this sort of solution, we have to type the level labels twice. The first occurrence defines the label-level mapping, while the second occurrence defines the order of the levels. I think this is inefficient, and lends itself to the possibility of human error.
 
 Compare the above with the following base-R solution:
 
