@@ -16,6 +16,10 @@ To install the package from CRAN:
 install.packages('baseverse')
 ```
 
+## Getting started
+
+The package includes [a vignette](https://cran.r-project.org/web/packages/baseverse/vignettes/introduction.html).
+
 ## `base_match()` and `base_when()`
 
 ### Motivation
