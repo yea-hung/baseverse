@@ -74,6 +74,6 @@ nhanes<-nhanes |>
   )
 ```
 
-### Warning
+### Details
 
 `base_when()` does not exactly mimic `case_when()`, and I do not intend it to. A key difference is `base_when()` will evaluate all conditions defined in `conditions` whereas `case_when()` will, for each position, stop when a condition is met.
