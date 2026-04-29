@@ -4,7 +4,7 @@
 
 - **wrapper functions for existing base-R functions**: These begin with `p_` and support native piping. For example, `p_lm()` is a wrapper for `lm()` supporting native piping.
 - **wrapper functions for existing base-R features**: These are named after the underlying symbols. For example, `dollar()` is a wrapper for dollar-sign notation.
-- **functions that mimic tidyverse functions**: These include `base_match()` and `base_when()` from *dplyr* (see the [section below](base_match-and-base_when)). 
+- **functions that mimic tidyverse functions**: These include `base_match()` and `base_when()` from *dplyr* (see the [section below](#base_match-and-base_when)). 
 
 # Installation
 
