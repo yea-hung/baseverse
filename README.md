@@ -18,10 +18,10 @@ To install the CRAN version:
 install.packages('baseverse')
 ```
 
-Or, to install the GitHub version, use `install_github()` from the *remotes* package or `pak()` from the *pak* package:
+Or, to install the GitHub version, use `install_github()` from the *remotes* package or `pkg_install()` from the *pak* package:
 
 ```r
-pak::pak('yea-hung/baseverse')
+pak::pkg_install('yea-hung/baseverse')
 ```
 
 ## `base_match()` and `base_when()`
