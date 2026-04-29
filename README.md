@@ -10,13 +10,7 @@
 
 The package is now available on CRAN! 🥳 
 
-To install the GitHub version instead (which may be more recent than the CRAN version), first install *remotes* if you don't already have it:
-
-```r
-install.packages('remotes')
-```
-
-Then, install the *baseverse* package using `install_github()`:
+To install the GitHub version instead (which may be more recent than the CRAN version), use `install_github()` from the *remotes* package:
 
 ```r
 remotes::install_github('yea-hung/baseverse')
