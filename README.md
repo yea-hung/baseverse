@@ -8,12 +8,20 @@
 
 ## Installation
 
-The package is now available on CRAN! 🥳 
+The package is now available [on CRAN](https://cran.r-project.org/web/packages/baseverse/index.html)! 🥳 
 
-To install the GitHub version instead (which may be more recent than the CRAN version), use `install_github()` from the *remotes* package:
+The CRAN version might, occasionally, lag slightly behind the GitHub version.
+
+To install the CRAN version:
 
 ```r
-remotes::install_github('yea-hung/baseverse')
+install.packages('baseverse')
+```
+
+Or, to install the GitHub version, use `install_github()` from the *remotes* package or `pak()` from the *pak* package:
+
+```r
+pak::pak('yea-hung/baseverse')
 ```
 
 ## `base_match()` and `base_when()`
